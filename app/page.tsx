@@ -13,15 +13,13 @@ import {
 import flyer from "../public/flyer.pdf";
 import homeImg from "../public/home-page.jpg";
 import img from "../public/story.jpg";
-import Card from "./components/Card/Card";
 import BootstrapCarousel from "./components/Carousels/Carousel";
 import Footer from "./components/Footer/Footer";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
-import IntroductionMessage from "./components/static/IntroductionMessage/IntroductionMessage";
 import "./home.scss";
 
 export default function Home() {
-  const formSubmit = (e) => {
+  const formSubmit = (e: any) => {
     console.log("is this working");
     e.preventDefault();
     emailjs.sendForm(
@@ -39,7 +37,7 @@ export default function Home() {
         <div className="company-name">
           <p>
             Nestled in the heart of our community, we pride ourselves on being
-            more than just a supplier; we're your partners in health care
+            more than just a supplier; we&apos;re your partners in health care
             excellence.
           </p>
           {/* <span className=".timzu">Timzu</span>
@@ -59,8 +57,8 @@ export default function Home() {
                 >
                   At Timzu Distributors, we understand the importance of
                   reliable, high-quality medical supplies for practitioners and
-                  patients alike. Whether you're a small clinic, a bustling
-                  hospital, or an individual in need, we're here to provide
+                  patients alike. Whether you&apos;re a small clinic, a bustling
+                  hospital, or an individual in need, we&apos;re here to provide
                   personalized service and top-notch products tailored to your
                   unique requirements.
                 </p>
@@ -193,8 +191,8 @@ export default function Home() {
                   For more information, inquire below about our extensive range
                   of medical glove products. Our dedicated team is ready to
                   provide detailed specifications, pricing options, and
-                  assistance tailored to your requirements. Don't hesitate to
-                  reach out to us for expert guidance on selecting the most
+                  assistance tailored to your requirements. Don&apos;t hesitate
+                  to reach out to us for expert guidance on selecting the most
                   suitable gloves for your medical needs.
                 </p>
                 <div className="App mt-24" style={{ textAlign: "center" }}>
@@ -296,40 +294,6 @@ export default function Home() {
             </form>
           </SegmentInline>
         </Segment>
-        {/* <div className="ui raised very padded text container segment">
-          <h2
-            className="ui label-detail"
-            style={{ fontSize: "xx-large", color: "#a0ccd9" }}
-          >
-            Inquire Information
-          </h2>
-
-          <form className="ui form flex" onSubmit={formSubmit}>
-            <div className="field flex-item" style={{ marginRight: "5vh" }}>
-              <label className="label-detail">First Name</label>
-              <input type="text" name="first-name" placeholder="First Name" />
-            </div>
-            <div className="field flex-item" style={{ marginRight: "5vh" }}>
-              <label className="label-detail">Last Name</label>
-              <input type="text" name="last-name" placeholder="Last Name" />
-            </div>
-            <div className="field flex-item" style={{ marginRight: "5vh" }}>
-              <label className="label-detail">Email</label>
-              <input type="email" name="from_email" placeholder="First Name" />
-            </div>
-            <div className="field flex-item" style={{ marginRight: "5vh" }}>
-              <label className="label-detail">Message</label>
-              <textarea name="message" placeholder="Message" />
-            </div>
-          </form>
-          <button
-            className="ui button"
-            style={{ marginRight: "5vh" }}
-            type="submit"
-          >
-            Submit
-          </button>
-        </div> */}
         <Footer />
       </div>
     </>

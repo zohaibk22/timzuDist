@@ -14,8 +14,7 @@ import "./NavigationBar.scss";
 export default class NavigationBar extends Component {
   state = { activeItem: "home" };
 
-  handleItemClick = (e, { name }) => {
-    console.log(this.state, "state");
+  handleItemClick = (e: any, { name }: { name: any }) => {
     this.setState({ activeItem: name });
   };
 
@@ -36,18 +35,10 @@ export default class NavigationBar extends Component {
             <MenuItem
               name="home"
               active={activeItem === "home"}
-              onClick={this.handleItemClick}
+              onClick={(e) => {
+                this.handleItemClick(e, { name });
+              }}
             />
-            {/* <MenuItem
-              name="messages"
-              active={activeItem === "messages"}
-              onClick={this.handleItemClick}
-            />
-            <MenuItem
-              name="friends"
-              active={activeItem === "friends"}
-              onClick={this.handleItemClick}
-            /> */}
           </MenuMenu>
         </Menu>
       </div>
