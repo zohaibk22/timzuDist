@@ -27,15 +27,27 @@ const Footer = () => {
       {/* <Image src="/images/wireframe/media-paragraph.png" alt="" /> */}
       <List celled horizontal>
         <ListItem className="list-item">
-          <Icon name="phone" circular />
+          <Icon
+            name="phone"
+            circular
+            style={{ position: "relative", bottom: "1vh", right: ".5vh" }}
+          />
           Phone: 347-307-6212
         </ListItem>
         <ListItem className="list-item">
-          <Icon name="mail outline" circular />
+          <Icon
+            name="mail outline"
+            circular
+            style={{ position: "relative", bottom: "1vh", right: ".5vh" }}
+          />
           Email: timzu.distributors@gmail.com
         </ListItem>
         <ListItem className="list-item">
-          <Icon name="home" circular />
+          <Icon
+            name="home"
+            circular
+            style={{ position: "relative", bottom: "1vh", right: ".5vh" }}
+          />
           PO Box 294, Yonkers NY 10710
         </ListItem>
       </List>
